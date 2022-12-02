@@ -3,6 +3,7 @@ var startQuizBtn = document.querySelector('.startQuiz');
 var startedEl = document.querySelector('.started');
 var finishedEl = document.querySelector('.finished');
 
+
 var countdownEl = document.getElementById('countdown');
 var secondsLeft = 45;
 
@@ -13,6 +14,9 @@ var ans2Btn = document.getElementById('ans2');
 var ans3Btn = document.getElementById('ans3');
 var ans4Btn = document.getElementById('ans4');
 var checkAnsEl = document.getElementById('checkAns');
+
+var scoreEl = document.getElementById('score');
+
 
 var questionCount = 0;
 
@@ -100,8 +104,6 @@ function checkAns(event) {
         secondsLeft -= 10;
         checked.textContent = "Wrong!! 😓";
     }
-    console.log(questions[questionCount].correctAnswer)
-    console.log(event.target.value);
 
     if (questionCount < questions.length) {
         questionCount++;
@@ -109,7 +111,6 @@ function checkAns(event) {
 
     setQuestion(questionCount); 
 }
-
 
 
 // Calls begunQuiz() when Begin button is pressed
