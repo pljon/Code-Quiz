@@ -136,10 +136,19 @@ function setElementInLocalStorage(elementToAdd) {
     localStorage.setItem('score', JSON.stringify(currentlyInStorage));
 }
 
-function submitLatestScore() {
+function submitLatestScore(event) {
+    event.preventDefault();
+    console.log('button works')
     var initials = document.getElementById('initials').value;
     var newScoreToSubmit = {
-        initials: initials, score: 
+        initials: initials, score: secondsLeft
     }
-
+    setElementInLocalStorage(newScoreToSubmit);
+    window.location.href='./highscores.html'
 }
+
+var submitBtn = document.querySelector('#submit');
+submitBtn.addEventListener('click', submitLatestScore)
+
+// would i need to make a variable for initials in input element?
+// var initialsInput = document.querySelector
