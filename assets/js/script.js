@@ -142,5 +142,7 @@ function submitLatestScore(event) {
     window.location.href='./highscores.html'
 }
 
+
+
 var submitBtn = document.querySelector('#submit');
 submitBtn.addEventListener('click', submitLatestScore)

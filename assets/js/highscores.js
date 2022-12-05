@@ -1,4 +1,5 @@
 var $scoreList = document.getElementById("score-list");
+var clearScoresBtn = document.getElementById("clear-scores");
 
 function getFromLocalStorage() {
     return JSON.parse(localStorage.getItem('score')) || [];
@@ -13,5 +14,14 @@ for (var i=0; i<currentlyInStorage.length; i++) {
 
     html+=$li;
 };
+
+// Clear local storage function
+function clearLocalStorage(event) {
+    localStorage.clear();
+    location.reload();
+}
+
+// Clear local storage function on click
+clearScoresBtn.addEventListener('click', clearLocalStorage);
 
 $scoreList.innerHTML = html;
