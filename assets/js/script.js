@@ -120,12 +120,6 @@ ansBtn.forEach(value => {
     value.addEventListener('click', checkAns);
 });
 
-
-// we need to save some data from the game so that we can move to high score page and see current high scores
-// what is the relevant data we want to save? => initials and score
-// each game should have a {initials: "pc", score: 42}
-//all the scores should look like [{initials: "pc", score: 42}, {...}, {...}]
-
 function getFromLocalStorage() {
     return JSON.parse(localStorage.getItem('score')) || [];
 };
@@ -150,6 +144,3 @@ function submitLatestScore(event) {
 
 var submitBtn = document.querySelector('#submit');
 submitBtn.addEventListener('click', submitLatestScore)
-
-// would i need to make a variable for initials in input element?
-// var initialsInput = document.querySelector
