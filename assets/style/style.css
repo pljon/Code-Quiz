@@ -94,3 +94,12 @@ li {
     margin-left: 1.25vw;
     padding: 0.5vh 0.5vw 0.5vh 0.5vw;
 }
+
+.highscores {
+    margin-top: 10vh;
+    font-size: 2rem;
+}
+
+#score-list {
+    margin: 4vh 0;
+}

@@ -138,11 +138,12 @@ function setElementInLocalStorage(elementToAdd) {
 
 function submitLatestScore(event) {
     event.preventDefault();
-    console.log('button works')
+
     var initials = document.getElementById('initials').value;
     var newScoreToSubmit = {
         initials: initials, score: secondsLeft
     }
+
     setElementInLocalStorage(newScoreToSubmit);
     window.location.href='./highscores.html'
 }
